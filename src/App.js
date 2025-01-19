@@ -9,6 +9,8 @@ import UserDetails from './components/userDetails'
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
+  const host = process.env.REACT_APP_HOST;
+
   return (
     <Router>
       <div className="App">
@@ -36,6 +38,7 @@ function App() {
 
         <div className="auth-wrapper">
           <div className="auth-inner">
+          <p>Estás conectado a: <strong>{host}</strong></p>
             <Routes>
               <Route exact path="/" element={isLoggedIn==="true"?<UserDetails/>:<Login/>}/>
               <Route path="/sign-in" element={<Login />} />
