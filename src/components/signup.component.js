@@ -17,7 +17,7 @@ handleSubmit(e){
   const { fname,lname,email,password} = this.state;
   console.log(fname,lname,email,password);
   const apiUrl = process.env.REACT_APP_API_HOST;
-  fetch(`http://${apiUrl}:80/register`,{
+  fetch(`http://${apiUrl}:8080/register`,{
     method:"POST",
     crossDomain:true,
     headers:{
