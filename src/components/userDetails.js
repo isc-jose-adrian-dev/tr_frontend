@@ -9,7 +9,7 @@ export default class UserDetails extends Component{
     }
     componentDidMount(){
         const apiUrl = process.env.REACT_APP_API_HOST;
-        fetch(`http://${apiUrl}:80/userData`,{
+        fetch(`http://${apiUrl}:8080/userData`,{
     method:"POST",
     crossDomain:true,
     headers:{
@@ -35,8 +35,7 @@ logOut=()=>{
     render() {
         return (
             <div>
-                Name <h1> {this.state.userData.fname}</h1>
-                E-mail <h1> {this.state.userData.email}</h1>
+                Bienvenido al sitio web
                 <br/>
                 <button onClick={this.logOut} className="btn btn-primary">Log Out</button>
             </div>
